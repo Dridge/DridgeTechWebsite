@@ -41,9 +41,9 @@
         /* Remove border and change up box shadow for more contrast */
         .navbar .navbar-inner {
             border: 0;
-            -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+            -webkit-box-shadow: 0 2px 10px rgba(91, 102, 105, 0.25);
             -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-            box-shadow: 0 2px 10px rgba(0,0,0,.25);
+            box-shadow: 0 2px 10px rgba(91, 102, 105, 0.25);
         }
 
         /* Downsize the brand/project name a bit */
@@ -124,7 +124,22 @@
         }
 
 
+        .modal-dialog {
+            background: #1e1e1e;
+        }
 
+        .modal-dialog .modal-footer {
+            background: #1e1e1e;
+        }
+
+        .modal-dialog .modal-footer .btn {
+            background: #bcbcbc;
+        }
+
+        .modal-dialog .modal-content .form-group .form-control{
+            background: #bcbcbc;
+            color: #fbfbfb
+        }
         /* MARKETING CONTENT
         -------------------------------------------------- */
 
@@ -308,18 +323,18 @@
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
                 <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <!--<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button>-->
                 <a class="brand" href="#aboutme">Richard Eldridge</a>
                 <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-                <div class="nav-collapse collapse">
+                <!--<div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active"><a href="#goToColumns">About</a></li>
-                        <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
-                        <!--<li class="dropdown">
+                        &lt;!&ndash; Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns &ndash;&gt;
+                        &lt;!&ndash;<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
@@ -330,9 +345,9 @@
                                 <li><a href="#">Separated link</a></li>
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
-                        </li>-->
+                        </li>&ndash;&gt;
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>--><!--/.nav-collapse -->
             </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -352,7 +367,7 @@
                     <h1>Richard Eldridge</h1>
                     <p class="lead">Java developer with experience in testing</p>
                     <p>
-                        <a id="aboutBtn" href=#aboutme class="btn btn-primary" href="#goToColumns" >Learn More</a>
+                        <a id="aboutBtn" class="btn btn-primary" href="#goToColumns" >Learn More</a>
                         <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
                     </p>
                 </div>
@@ -365,7 +380,7 @@
                     <h1>Experienced</h1>
                     <p class="lead">Worked with multiple banking applications in a variety of roles.
                         Currently at RBS as a Java Developer</p>
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/richardeldridgeit">Learn more</a>
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/richardeldridgeit">Linked In</a>
                     <a class="btn btn-primary" href="#dev">Oracle Certified Java 7</a>
                     <a class="btn btn-primary" href="#test">Testing experience</a>
                 </div>
@@ -408,10 +423,8 @@
     </div><!-- /.row -->
 
     <div class="row">
-        <div class="span4"></div>
-        <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
-        </div>
-        <div class="span4"></div>
+            <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
+        <a class="btn" href="#">Back &raquo;</a>
     </div><!-- /.row -->
 
     <!-- START THE FEATURETTES -->
