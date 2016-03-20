@@ -71,9 +71,9 @@
 
         /* Carousel base class */
         .carousel {
-            background: ;
+            background: #000000 repeat-y;
             background-height: 100px
-            margin-bottom: 10px;
+            margin-bottom: 60px;
         }
 
         .carousel .container {
@@ -98,8 +98,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
-            width: 100%;
+            min-width: 100%;
+            height: 500px;
+            max-width: none;
         }
 
         .carousel-caption {
@@ -258,13 +259,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="../ico/favicon.png">
-
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog modal-sm">
@@ -297,25 +291,6 @@
 
         </div>
     </div>
-
-    <script type="text/javascript">
-    $(document).ready(function () {
-        $("input#submit").click(function(){
-            $.ajax({
-                type: "POST",
-                url: "../php/process.php", //process to mail
-                data: $('form.contact').serialize(),
-                success: function(msg){
-                    $("#thanks").html(msg) //hide button and show thank you
-                    $("#form-content").modal('hide'); //hide popup
-                },
-                error: function(){
-                    alert("failure");
-                }
-            });
-        });
-    });
-</script>
 </head>
 
 <body>
@@ -369,6 +344,7 @@
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
         <div class="item active" >
+            <img src="../img/Shibuya.jpg" alt="ShibuyaCrossing Feb 2016"/>
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Richard Eldridge</h1>
@@ -381,6 +357,7 @@
             </div>
         </div>
         <div class="item" >
+            <img src="../img/Brussels.jpg" alt="Brussels Feb 2016"/>
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Experienced</h1>
@@ -430,7 +407,7 @@
 
     <div class="row">
         <div class="span4"></div>
-        <div class="span4"> <button id="contact1" class="btn btn-primary" href="#aboutme" data-original-title="Contacting Richard Eldridge" title="">Contact me</button> <a class="btn" href="#navBar">Top &raquo;</a>
+        <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
         </div>
         <div class="span4"></div>
     </div><!-- /.row -->
@@ -470,7 +447,7 @@
 
     <div class="featurette" id="aboutme">
         <img class="featurette-image pull-right" src="../img/me1.png">
-        <h2 class="featurette-heading">A bit more about me... <span class="muted">If you've scrolled this far...</span></h2>
+        <h2 class="featurette-heading">A bit more about me... <span class="muted"></span></h2>
         <ul class="lead" style="list-style-type:square">
             <li>Currently living in London with my wife Holly</li>
             <li>Studied at Staffordshire University for under grad and post grad</li>
@@ -478,7 +455,7 @@
             <li>Graduated 2009, 2:1 - Psychology and Criminology</li>
             <li>Post Grad Diploma 2010, distinction - Computing for Business</li>
         </ul>
-        <p> <button class="btn btn-primary" data-original-title="Contact Richard Eldridge" title="">Contact me</button> <a class="btn" href="#goToColumns">Back &raquo;</a></p>
+        <p> <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button> <a class="btn" href="#goToColumns">Back &raquo;</a></p>
     </div>
 
 
