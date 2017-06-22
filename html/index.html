@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Carousel Template &middot; Bootstrap</title>
+    <title>Richard Eldridge - Java Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Richard Eldridge Java Testing Work Contact Jobs Contracting Permanent">
     <meta name="author" content="Richard Eldridge with Twitter bootstrap">
@@ -59,10 +59,10 @@
             padding: 15px 20px;
         }
 
-        /* Offset the responsive button for proper vertical alignment */
+        /* Offset the responsive button for proper vertical alignment
         .navbar .btn-navbar {
             margin-top: 10px;
-        }
+        }*/
 
 
 
@@ -72,7 +72,6 @@
         /* Carousel base class */
         .carousel {
             background: #000000 repeat-y;
-            background-height: 100px
             margin-bottom: 60px;
 
         }
@@ -296,12 +295,12 @@
                         <input type="text" class="form-control" id="returnTo">
                     </div>
                     <div class="form-group">
-                        <label for="msg">Message:</label>
-                        <textarea class="form-control" rows="5" id="msg"></textarea>
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" rows="5" id="message"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-default" id="submitMsg">Submit</button>
+                    <button type="submit" value="Send!" class="btn btn-default" id="submitMsg">Submit</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -379,7 +378,7 @@
                 <div class="carousel-caption">
                     <h1>Experienced</h1>
                     <p class="lead">Worked with multiple banking applications in a variety of roles.
-                        Currently at RBS as a Java Developer</p>
+                        Most recently at RBS as a Java Developer in Credit Risk and Default Loss Estimation</p>
                     <a class="btn btn-primary" href="https://www.linkedin.com/in/richardeldridgeit">Linked In</a>
                     <a class="btn btn-primary" href="#dev">Oracle Certified Java 7</a>
                     <a class="btn btn-primary" href="#test">Testing experience</a>
@@ -404,19 +403,19 @@
         <div class="span4">
             <img class="img-circle" src="../img/me1.png" data-src="holder.js/140x140">
             <h2>About me</h2>
-            <p>Friendly,hardworking,and honest.</p>
+            <p>Friendly, hardworking and honest.</p>
             <a class="fill-div" href="#aboutme"></a>
         </div><!-- /.span4 -->
         <div class="span4">
             <img src="../img/java.png" data-src="holder.js/140x140">
-            <h2>Developer</h2>
-            <p>Java (Oracle Certified Java 7 OCA), SQL, Unix, Android.</p>
+            <h2>Developer</h2><!-- TODO change this to a OCA Oracle certification badge-->
+            <p>Java (Certified Java 7 OCA), SQL, Unix, Android.</p>
             <a class="fill-div" href="#dev"></a>
         </div><!-- /.span4 -->
         <div class="span4">
             <img src="../img/iseb.png" data-src="holder.js/140x140">
-            <h2>Tester</h2>
-            <p>Experience in manual and automated testing and a variety of tools</p>
+            <h2>Tester</h2><!--TODO Change this to a selenium logo-->
+            <p>Experience in automated and manual testing with a variety of tools</p>
             <a class="fill-div" href="#test"></a>
         </div><!-- /.span4 -->
 
@@ -424,7 +423,7 @@
 
     <div class="row">
             <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
-        <a class="btn" href="#">Back &raquo;</a>
+        <a class="btn" href="#">Top &#8686;</a>
     </div><!-- /.row -->
 
     <!-- START THE FEATURETTES -->
@@ -434,13 +433,16 @@
     <div class="featurette" id="dev">
         <img class="featurette-image pull-right" src="../img/programmer.jpg">
         <h2 class="featurette-heading">The Developer... <span class="muted">A person or thing that develops or innovates</span></h2>
-        <p class="lead">I've been a Java Developer at RBS for 2 years
+        <p class="lead">I've been a Java Developer at RBS since January 2014
             I'm a certified Oracle Java 7 Associate.
-            I have been developing continuously and do not want to stop learning.
-            Currently my personal projects include this website, and a mobile app as part of a team of three.</p>
+            I want to work on exciting projects and to never stop learning.
+            Myself and colleagues created an android app called TestMaster.
+            Currently my personal projects include this website, improving my github projects and completing CodeWars kata's</p>
         <p>
             <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
-            <a class="btn" href="#">Back &raquo;</a>
+            <button type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.oca" >Test Master OCA7 App</button>
+            <button type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.ocp" >Test Master OCP7 App</button>
+            <a class="btn" href="#">Top &#8686;</a>
         </p>
     </div>
 
@@ -449,11 +451,10 @@
     <div class="featurette" id="test">
         <img class="featurette-image pull-left" src="../img/softwaretesting.png">
         <h2 class="featurette-heading">The tester... <span class="muted">Reducing risk, increasing confidence in quality</span></h2>
-        <p class="lead">I have a wealth of experience with testing, I have done manual testing, automation (Selenium and TestDrive), and a short spell as 'interim' manager as we off-shored our testing expertise
-        I performed these roles over three years.</p>
+        <p class="lead">I have a wealth of experience with testing, I have done manual testing, automation (Selenium, mockito, easy mock, junit), and a short spell as 'interim' manager as we trained our off-shore testing team.</p>
         <p>
             <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
-            <a class="btn" href="#">Back &raquo;</a>
+            <a class="btn" href="#">Top &#8686;</a>
         </p>
 
     </div>
@@ -466,11 +467,10 @@
         <ul class="lead" style="list-style-type:square">
             <li>Currently living in London with my wife Holly</li>
             <li>Studied at Staffordshire University for under grad and post grad</li>
-            <li>Hobbies include reading, gaming, drumming and continuous learning</li>
             <li>Graduated 2009, 2:1 - Psychology and Criminology</li>
             <li>Post Grad Diploma 2010, distinction - Computing for Business</li>
         </ul>
-        <p> <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button> <a class="btn" href="#">Back &raquo;</a></p>
+        <p> <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button> <a class="btn" href="#">Top &#8686;</a></p>
     </div>
 
 
@@ -483,7 +483,6 @@
     <footer>
         <div>
             <p>Thanks to twitter bootstrap, w3schools, stackoverflow and all the amazing blogs for helping me build this site!</p>
-            <p>It is so much fun to learn when you have good resources and good people to use.</p>
         </div>
         <div>
             <p>&copy; 2016 Eldridge, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
