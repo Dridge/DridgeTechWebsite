@@ -2278,3 +2278,19 @@
 
 
 }(window.jQuery);
+
+$(document).ready(function () {
+    $("input#submit").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "process.php", //process to mail
+            data: $('form.contact').serialize(),
+            success: function(){
+                $("#myModal").modal('hide'); //hide popup
+            },
+            error: function(){
+                alert("failure");
+            }
+        });
+    });
+})(window.jQuery);
