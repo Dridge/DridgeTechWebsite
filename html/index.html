@@ -21,49 +21,10 @@
             color: #5a5a5a;
         }
 
-        /* CUSTOMIZE THE NAVBAR
-        -------------------------------------------------- */
-
-        /* Special class on .container surrounding .navbar, used for positioning it into place. */
-        .navbar-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            margin-top: 20px;
-            margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-        }
-        .navbar-wrapper .navbar {
-
-        }
-
-        /* Remove border and change up box shadow for more contrast */
-        .navbar .navbar-inner {
-            border: 0;
-            -webkit-box-shadow: 0 2px 10px rgba(91, 102, 105, 0.25);
-            -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-            box-shadow: 0 2px 10px rgba(91, 102, 105, 0.25);
-        }
-
-        /* Downsize the brand/project name a bit */
-        .navbar .brand {
-            padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-            font-size: 16px;
-            font-weight: bold;
-            text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-        }
-
         /* Navbar links: increase padding for taller navbar */
         .navbar .nav > li > a {
             padding: 15px 20px;
         }
-
-        /* Offset the responsive button for proper vertical alignment
-        .navbar .btn-navbar {
-            margin-top: 10px;
-        }*/
-
 
 
         /* CUSTOMIZE THE CAROUSEL
@@ -135,10 +96,6 @@
             background: #bcbcbc;
         }
 
-        .modal-dialog .modal-content .form-group .form-control{
-            background: #bcbcbc;
-            color: #fbfbfb
-        }
         /* MARKETING CONTENT
         -------------------------------------------------- */
 
@@ -192,15 +149,6 @@
 
         @media (max-width: 979px) {
 
-            .container.navbar-wrapper {
-                margin-bottom: 0;
-                width: auto;
-            }
-            .navbar-inner {
-                border-radius: 0;
-                margin: -20px 0;
-            }
-
             .carousel .item {
                 height: 500px;
             }
@@ -224,10 +172,6 @@
 
 
         @media (max-width: 767px) {
-
-            .navbar-inner {
-                margin: -20px;
-            }
 
             .carousel {
                 margin-left: -20px;
@@ -275,113 +219,57 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Contact Richard Eldridge</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="sdr">Name:</label>
-                        <input type="text" class="form-control" id="sdr">
-                    </div>
-                    <div class="form-group">
-                        <label for="returnTo">Your E-Mail:</label>
-                        <input type="text" class="form-control" id="returnTo">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" rows="5" id="message"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" value="Send!" class="btn btn-default" id="submitMsg">Submit</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</head>
+    </head>
 
 <body>
-
-
-
-<!-- NAVBAR
-================================================== -->
-<div id="navBar" class="navbar-wrapper">
-    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-    <div class="container">
-
-        <div class="navbar navbar-inverse">
-            <div class="navbar-inner">
-                <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-                <!--<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>-->
-                <a class="brand" href="#aboutme">Richard Eldridge</a>
-                <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-                <!--<div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="active"><a href="#goToColumns">About</a></li>
-                        &lt;!&ndash; Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns &ndash;&gt;
-                        &lt;!&ndash;<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="nav-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>&ndash;&gt;
-                    </ul>
-                </div>--><!--/.nav-collapse -->
-            </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-    </div> <!-- /.container -->
-</div><!-- /.navbar-wrapper -->
-
-
+    <!-- Modal form-content-->
+    <div class="modal-content modal fade modal-dialog modal-sm" id="form-content" style="display: none;" role="dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Contact Richard Eldridge</h4>
+        </div>
+        <div class="modal-body form-group">
+            <form class="contact form-control" name="contact">
+                <label class="label" for="name">Your Name</label><br>
+                <input type="text" name="name" id="name" class="form-control"><br>
+                <label class="label" for="email">Your E-mail</label><br>
+                <input type="email" name="email" id="email" class="form-control"><br>
+                <label class="label" for="message">Enter a Message</label><br>
+                <textarea class="form-control" rows="5" id="message"></textarea>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input class="btn btn-default" type="submit" value="Send" id="submit">
+            <a class="btn btn-default" data-dismiss="modal">Close</a>
+        </div>
+    </div>
 
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
         <div class="item active" >
-            <img src="../img/Shibuya1.png" alt="ShibuyaCrossing Feb 2016"/>
+            <img src="../img/large/The Lower Falls of the Labrofoss (2).jpg" alt="The Lower Falls of the Labrofoss - National Portrait Gallery"/>
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Richard Eldridge</h1>
                     <p class="lead">Java developer with experience in testing</p>
                     <p>
                         <a id="aboutBtn" class="btn btn-primary" href="#goToColumns" >Learn More</a>
-                        <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
+                        <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-lg">Contact Me</a>
                     </p>
                 </div>
             </div>
         </div>
         <div class="item" >
-            <img src="../img/Brussels1.png" alt="Brussels Feb 2016"/>
+            <img src="../img/large/Chalets at Rigi (2).jpg" alt="Chalets at Rigi - National Portrait Gallery"/>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Experienced</h1>
-                    <p class="lead">Worked with multiple banking applications in a variety of roles.
-                        Most recently at RBS as a Java Developer in Credit Risk and Default Loss Estimation</p>
+                    <h1>Find out more</h1>
+                    <p class="lead">Experienced developer, with a testing background.</p>
                     <a class="btn btn-primary" href="https://www.linkedin.com/in/richardeldridgeit">Linked In</a>
                     <a class="btn btn-primary" href="#dev">Oracle Certified Java 7</a>
-                    <a class="btn btn-primary" href="#test">Testing experience</a>
+                    <a class="btn btn-primary" href="#test">Testing specialist</a>
                 </div>
             </div>
         </div>
@@ -407,14 +295,14 @@
             <a class="fill-div" href="#aboutme"></a>
         </div><!-- /.span4 -->
         <div class="span4">
-            <img src="../img/java.png" data-src="holder.js/140x140">
-            <h2>Developer</h2><!-- TODO change this to a OCA Oracle certification badge-->
+            <img class="img-circle" src="../img/developer/oracle_associate.png" data-src="holder.js/140x140">
+            <h2>Developer</h2>
             <p>Java (Certified Java 7 OCA), SQL, Unix, Android.</p>
             <a class="fill-div" href="#dev"></a>
         </div><!-- /.span4 -->
         <div class="span4">
-            <img src="../img/iseb.png" data-src="holder.js/140x140">
-            <h2>Tester</h2><!--TODO Change this to a selenium logo-->
+            <img class="img-circle" src="../img/testing/selenium.jpg" data-src="holder.js/140x140">
+            <h2>Tester</h2>
             <p>Experience in automated and manual testing with a variety of tools</p>
             <a class="fill-div" href="#test"></a>
         </div><!-- /.span4 -->
@@ -422,7 +310,7 @@
     </div><!-- /.row -->
 
     <div class="row">
-            <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
+        <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-lg">Contact Me</a>
         <a class="btn" href="#">Top &#8686;</a>
     </div><!-- /.row -->
 
@@ -431,7 +319,7 @@
     <hr class="featurette-divider">
 
     <div class="featurette" id="dev">
-        <img class="featurette-image pull-right" src="../img/programmer.jpg">
+        <img class="featurette-image pull-right" src="../img/developer/programmer.jpg">
         <h2 class="featurette-heading">The Developer... <span class="muted">A person or thing that develops or innovates</span></h2>
         <p class="lead">I've been a Java Developer at RBS since January 2014
             I'm a certified Oracle Java 7 Associate.
@@ -439,21 +327,27 @@
             Myself and colleagues created an android app called TestMaster.
             Currently my personal projects include this website, improving my github projects and completing CodeWars kata's</p>
         <p>
-            <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
-            <button type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.oca" >Test Master OCA7 App</button>
-            <button type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.ocp" >Test Master OCP7 App</button>
+            <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-lg">Contact Me</a>
+            <a href="https://github.com/Dridge" class="btn btn-primary btn-lg">Git Hub account</a>
+            <a href="https://www.codewars.com/users/Dridge" class="btn btn-primary btn-lg">Code Wars account</a>
             <a class="btn" href="#">Top &#8686;</a>
+        </p>
+        <p>
+            <a type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.oca" >Test Master OCA7 App</a>
+            <a type="button" class="btn btn-primary btn-lg"  href="https://play.google.com/store/apps/details?id=com.testmaster.se7.ocp" >Test Master OCP7 App</a>
+
         </p>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="featurette" id="test">
-        <img class="featurette-image pull-left" src="../img/softwaretesting.png">
+        <img class="featurette-image pull-left" src="../img/testing/softwaretesting.png">
         <h2 class="featurette-heading">The tester... <span class="muted">Reducing risk, increasing confidence in quality</span></h2>
         <p class="lead">I have a wealth of experience with testing, I have done manual testing, automation (Selenium, mockito, easy mock, junit), and a short spell as 'interim' manager as we trained our off-shore testing team.</p>
         <p>
-            <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button>
+            <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-lg">Contact Me</a>
+            <a href="https://www.linkedin.com/in/richardeldridgeit/" class="btn btn-primary btn-lg">Linked In</a>
             <a class="btn" href="#">Top &#8686;</a>
         </p>
 
@@ -465,12 +359,16 @@
         <img class="featurette-image pull-right" src="../img/me1.png">
         <h2 class="featurette-heading">A bit more about me... <span class="muted"></span></h2>
         <ul class="lead" style="list-style-type:square">
-            <li>Currently living in London with my wife Holly</li>
+            <li>Currently living in London, born in Milton Keynes</li>
             <li>Studied at Staffordshire University for under grad and post grad</li>
-            <li>Graduated 2009, 2:1 - Psychology and Criminology</li>
             <li>Post Grad Diploma 2010, distinction - Computing for Business</li>
+            <li>Graduated 2009, BSC 2:1 - Psychology and Criminology</li>
         </ul>
-        <p> <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal" data-original-title="Contact Richard Eldridge" >Contact me</button> <a class="btn" href="#">Top &#8686;</a></p>
+        <p>
+            <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-lg">Contact Me</a>
+            <a href="https://www.linkedin.com/in/richardeldridgeit/" class="btn btn-primary btn-lg">Linked In</a>
+            <a class="btn" href="#">Top &#8686;</a>
+        </p>
     </div>
 
 
@@ -498,17 +396,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.js"></script>
-<!--
-<script src="../js/bootstrap-alert.js"></script>
-<script src="../js/bootstrap-modal.js"></script>
-<script src="../js/bootstrap-dropdown.js"></script>
-<script src="../js/bootstrap-scrollspy.js"></script>
-<script src="../js/bootstrap-tab.js"></script>
-<script src="../js/bootstrap-tooltip.js"></script>
-<script src="../js/bootstrap-popover.js"></script>
-<script src="../js/bootstrap-button.js"></script>
-<script src="../js/bootstrap-collapse.js"></script>
-<script src="../js/bootstrap-typeahead.js"></script>-->
 <script>
     !function ($) {
         $(function(){

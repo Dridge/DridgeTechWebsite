@@ -2279,18 +2279,20 @@
 
 }(window.jQuery);
 
+//credit to: http://untame.net/ "how-to-build-a-modal-contact-form-in-twitter-bootstrap-with-php-ajax/"
 $(document).ready(function () {
     $("input#submit").click(function(){
         $.ajax({
             type: "POST",
             url: "process.php", //process to mail
             data: $('form.contact').serialize(),
-            success: function(){
-                $("#myModal").modal('hide'); //hide popup
+            success: function(msg){
+                $("#form-content").modal('hide'); //hide popup
+                alert("Thanks, message sent! \nI'll get back to you as soon as possible.")
             },
             error: function(){
-                alert("failure");
+                alert("Sorry, something went wrong. Your message was not sent.");
             }
         });
     });
-})(window.jQuery);
+});
