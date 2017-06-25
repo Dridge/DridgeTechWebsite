@@ -2284,7 +2284,7 @@ $(document).ready(function () {
     $("input#submit").click(function(){
         $.ajax({
             type: "POST",
-            url: "process.php", //process to mail
+            url: "../php/process.php", //process to mail
             data: $('form.contact').serialize(),
             success: function(msg){
                 $("#form-content").modal('hide'); //hide popup

@@ -1,6 +1,6 @@
 <?php
 //add the recipient's address here
-$myemail = 'youremail@host.com';
+$myemail = 'richard.eldridge2010@gmail.com';
  
 //grab named inputs from html then post to #thanks
 if (isset($_POST['name'])) {
