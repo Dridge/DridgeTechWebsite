@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>Richard Eldridge - Java Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
     <meta name="description" content="Richard Eldridge Java Testing Work Contact Jobs Contracting Permanent">
     <meta name="author" content="Richard Eldridge with Twitter bootstrap">
 
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
     <style>
 
 
@@ -33,8 +35,7 @@
         /* Carousel base class */
         .carousel {
             background: #000000 repeat-y;
-            margin-bottom: 60px;
-
+            margin-bottom: 5%;
         }
 
         .carousel .container {
@@ -53,31 +54,36 @@
         }
 
         .carousel .item {
-            height: 350px;
+            max-height: 100%;
         }
         .carousel img {
             position: absolute;
             top: 0;
             left: 0;
             min-width: 100%;
-            height: 500px;
-            max-width: none;
+            max-width: 100%;
+            max-height: 100%;
             vertical-align: bottom;
         }
 
         .carousel-caption {
             background-color: transparent;
             position: static;
-            max-width: 550px;
+            max-width: 100%;
             padding: 0 20px;
-            margin-top: 200px;
+            margin: 10%;
         }
+
         .carousel-caption h1,
         .carousel-caption .lead {
-            margin: 0;
+            padding-left: 3%;
+            padding-bottom: 1%;
+            margin: 2%;
             line-height: 1.25;
             color: #fff;
-            text-shadow: 0 1px 1px rgba(0,0,0,.4);
+            border-radius: 25px;
+            background: repeating-linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))
+
         }
         .carousel-caption .btn {
             margin-top: 10px;
@@ -150,11 +156,13 @@
         @media (max-width: 979px) {
 
             .carousel .item {
-                height: 500px;
+                max-height: 500px;
+                border-style: none none inset none;
+                border-width: thick;
             }
             .carousel img {
                 width: auto;
-                height: 500px;
+                max-height: 500px;
             }
 
             .featurette {
@@ -178,13 +186,13 @@
                 margin-right: -20px;
             }
             .carousel .container {
-                height: 350px;
+                max-height: 350px;
             }
             .carousel .item {
-                height: 300px;
+                max-height: 300px;
             }
             .carousel img {
-                height: 300px;
+                max-height: 300px;
             }
             .carousel-caption {
                 width: 65%;
@@ -266,7 +274,7 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Find out more</h1>
-                    <p class="lead">Experienced developer, with a testing background.</p>
+                    <p class="lead">Experienced developer, with a testing background</p>
                     <a class="btn btn-primary" href="https://www.linkedin.com/in/richardeldridgeit">Linked In</a>
                     <a class="btn btn-primary" href="#dev">Oracle Certified Java 7</a>
                     <a class="btn btn-primary" href="#test">Testing specialist</a>
@@ -277,8 +285,6 @@
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div><!-- /.carousel -->
-
-
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
@@ -303,7 +309,7 @@
         <div class="span4">
             <img class="img-circle" src="../img/testing/selenium.jpg" data-src="holder.js/140x140">
             <h2>Tester</h2>
-            <p>Experience in automated and manual testing with a variety of tools</p>
+            <p>Experience in automated and manual testing with a variety of tools.</p>
             <a class="fill-div" href="#test"></a>
         </div><!-- /.span4 -->
 
