@@ -1,6 +1,6 @@
 <?php
 //add the recipient's address here
-$myemail = 'richard.eldridge2010@gmail.com';
+$myemail = 'richard.eldridge@s687914055.initial-website.co.uk';
  
 //grab named inputs from html then post to #thanks
 if (isset($_POST['name'])) {
@@ -22,4 +22,3 @@ $headers = "From: $myemail\n";
 $headers .= "Reply-To: $email";
 mail($to,$email_subject,$email_body,$headers);
 }
-?>
